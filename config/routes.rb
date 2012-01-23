@@ -1,4 +1,11 @@
 TaxiSec::Application.routes.draw do
+
+  resources :taxis
+
+  match "/auth/:provider/callback" => "sessions#create"
+  match "/signout" => "sessions#destroy", :as => :signout
+
+  root :to => "taxis#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

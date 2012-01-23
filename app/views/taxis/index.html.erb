@@ -1,0 +1,29 @@
+<h1>Listing taxis</h1>
+
+<table>
+  <tr>
+    <th>Placa</th>
+    <th>Color</th>
+    <th>Marca</th>
+    <th>Modelo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @taxis.each do |taxi| %>
+  <tr>
+    <td><%= taxi.placa %></td>
+    <td><%= taxi.color %></td>
+    <td><%= taxi.marca %></td>
+    <td><%= taxi.modelo %></td>
+    <td><%= link_to 'Show', taxi %></td>
+    <td><%= link_to 'Edit', edit_taxi_path(taxi) %></td>
+    <td><%= link_to 'Destroy', taxi, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Taxi', new_taxi_path %>

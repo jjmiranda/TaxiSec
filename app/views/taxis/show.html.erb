@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Placa:</b>
+  <%= @taxi.placa %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @taxi.color %>
+</p>
+
+<p>
+  <b>Marca:</b>
+  <%= @taxi.marca %>
+</p>
+
+<p>
+  <b>Modelo:</b>
+  <%= @taxi.modelo %>
+</p>
+
+
+<%= link_to 'Edit', edit_taxi_path(@taxi) %> |
+<%= link_to 'Back', taxis_path %>
