@@ -6,6 +6,7 @@ TaxiSec::Application.routes.draw do
   match "/signout" => "sessions#destroy", :as => :signout
 
   root :to => "taxis#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
